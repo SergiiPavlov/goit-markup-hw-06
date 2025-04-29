@@ -50,6 +50,12 @@ img {
   height: auto;
 }
 
+input,
+textarea,
+button {
+  font: inherit;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -66,9 +72,22 @@ img {
 /* common */
 
 .container {
-  max-width: 1158px;
-  padding: 0 15px;
+  max-width: 320px;
+  padding: 0 16px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+  }
 }
 
 /* header */
@@ -89,6 +108,12 @@ img {
   align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .header-nav__item {
+    display: none;
+  }
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -102,6 +127,12 @@ img {
 .header-logo {
   padding: 24px 0;
   margin-right: 76px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-logo {
+    padding: 16px 0;
+  }
 }
 
 .header-logo .logo-part {
@@ -149,20 +180,46 @@ img {
   margin-left: auto;
 }
 
-.contacts-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: none;
+  }
 }
 
-.contacts-link {
-  display: block;
-  padding: 24px 0;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--color-slate);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+<@media screen and (min-width: 1158px) {
+  .contacts-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1157px) {
+  .contacts-item:first-child {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    padding: 16px 0;
+    color: var(--color-slate);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .contacts-link {
+    display: block;
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
 }
 
 .nav-link:hover,
