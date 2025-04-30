@@ -57,21 +57,20 @@
           </ul>
         </address>
 
-        <button class="mobile-menu-open js-open-menu" type="button">
+        <button class="burger-btn" type="button" data-menu-open>
           <svg
-            class="mobile-menu-open-icon"
+            class="burger-icon"
             aria-label="mobile-menu-open"
             width="24"
             height="24"
-            stroke="var(--color-grey)"
           >
-            <use href="./images/icons.svg#mobile-menu-open"></use>
+            <use href="./images/icons.svg#icon-burger"></use>
           </svg>
         </button>
 
-        <div class="mobile-menu-container js-menu-container">
-          <div class="mobile-menu-wrapper">
-            <button class="mobile-menu-close js-close-menu" type="button">
+        <div class="mobile-menu" data-menu>
+          <div class="container mobile-menu-container">
+            <button class="mobile-menu-close" type="button" data-menu-close>
               <svg
                 class="mobile-menu-close-icon"
                 aria-label="mobile-menu-close"
@@ -82,17 +81,21 @@
               </svg>
             </button>
 
-            <ul class="mobile-menu-nav-list">
-              <li class="mobile-menu-nav-item">
-                <a class="mobile-menu-nav active" href="./index.html">Studio</a>
-              </li>
-              <li class="mobile-menu-nav-item">
-                <a class="mobile-menu-nav" href="">Portfolio</a>
-              </li>
-              <li class="mobile-menu-nav-item">
-                <a class="mobile-menu-nav" href="">Contacts</a>
-              </li>
-            </ul>
+            <nav class="mobile-menu-nav">
+              <ul class="mobile-menu-nav-list">
+                <li class="mobile-menu-nav-item">
+                  <a class="mobile-menu-nav-link active" href="./index.html"
+                    >Studio</a
+                  >
+                </li>
+                <li class="mobile-menu-nav-item">
+                  <a class="mobile-menu-nav-link" href="">Portfolio</a>
+                </li>
+                <li class="mobile-menu-nav-item">
+                  <a class="mobile-menu-nav-link" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
             <address class="mobile-menu-contacts">
               <ul class="mobile-menu-contacts-list">
                 <li class="mobile-menu-contacts-item">
@@ -146,7 +149,7 @@
 
     <main>
       <!-- #region main banner -->
-      <section class="main-banner main-banner-bg-image">
+      <section class="main-banner main-banner-bg-image hidden">
         <div class="container">
           <h1 class="main-banner-title">
             Effective Solutions for Your Business
@@ -159,7 +162,7 @@
       <!-- #endregion main banner -->
 
       <!-- #region presentation -->
-      <section class="presentation">
+      <section class="presentation hidden">
         <div class="container">
           <h2 class="visually-hidden">Presentation</h2>
           <ul class="presentation-list">
@@ -238,7 +241,7 @@
       <!-- #endregion presentation -->
 
       <!-- #region ourteam -->
-      <section class="team">
+      <section class="team hidden">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
@@ -500,7 +503,7 @@
       <!-- #endregion ourteam -->
 
       <!-- #region portfolio -->
-      <section class="portfolio">
+      <section class="portfolio hidden">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -768,7 +771,7 @@
       <!-- #endregion portfolio -->
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container footer-container">
         <div class="footer-logo-wrapper">
           <a class="logo footer-logo" href="./index.html"
@@ -864,7 +867,7 @@
         </div>
       </div>
     </footer>
-
+    <!-- 
     <div class="backdrop is-open" data-modal>
       <div class="modal">
         <button class="modal-button-close" type="button" data-modal-close>
@@ -979,8 +982,9 @@
           <button class="modal-button-submit" type="submit">Send</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
