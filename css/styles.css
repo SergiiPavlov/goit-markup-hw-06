@@ -264,7 +264,7 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
+  transform: translateX(100%);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -273,6 +273,7 @@ button {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transform: translateX(0);
 }
 
 .mobile-menu-container {
@@ -289,11 +290,112 @@ button {
   position: absolute;
   top: 24px;
   right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+  background-color: var(--color-ocean);
+  border: none;
+  fill: var(--color-white);
+}
+
+.mobile-menu-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-nav {
   margin-bottom: auto;
 }
+
+.mobile-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-menu-nav-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--color-grey);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-nav-link:hover,
+.mobile-menu-nav-link:focus {
+  color: var(--color-ocean);
+}
+
+.mobile-menu-nav-link.active {
+  color: var(--color-ocean);
+}
+
+.mobile-menu-contacts {
+  margin-bottom: 48px;
+}
+
+.mobile-menu-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu-contacts-item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu-contacts-tel {
+  color: var(--color-iris);
+}
+
+.mobile-menu-contacts-mail {
+  color: var(--color-slate);
+}
+
+.mobile-menu-social-list {
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+}
+
+.mobile-menu-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu-social-icon {
+  fill: var(--color-cloud);
+}
+
+.mobile-menu-social-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-iris);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-social-link:focus {
+  background-color: var(--color-ocean);
 
 @media screen and (min-width: 768px) {
   .mobile-menu {
