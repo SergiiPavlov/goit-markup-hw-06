@@ -81,7 +81,8 @@ button {
 
 .container {
   max-width: 320px;
-  padding: 0 16px;
+  padding left: 16;
+  padding right: 16;
   margin: 0 auto;
 }
 
@@ -403,3 +404,196 @@ button {
     display: none;
   }
 }
+
+/* hero main-banner */
+
+.main-banner {
+  background-color: var(--color-navy-blue);
+  padding: 72px 0;
+}
+
+.main-banner-bg-image {
+  margin: 0 auto;
+ width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/01-hero/hero-mob.jpg");
+}
+
+.main-banner-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  max-width: 216px;
+  text-align: center;
+  margin: 0 auto 72px;
+  color: var(--color-white);
+}
+
+.main-banner-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background-color: var(--color-iris);
+  border-radius: 4px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-banner-button:hover,
+.main-banner-button:focus {
+  background-color: var(--color-ocean);
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .main-banner-bg-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/01-hero/hero-mob@2.jpg');
+  }
+}
+
+                /* Tablets */
+
+
+@media screen and (min-width: 768px) {
+ .main-banner {
+    padding: 112px 0;
+  }
+
+  .main-banner-bg-image {
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/01-hero/hero-tab.jpg");
+ }
+
+.main-banner-title {
+  max-width: 496px;
+  text-align: center;
+  margin: 0 auto 36px;
+ 
+font-size: 56px;
+line-height: 1.07;
+ }
+
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi),
+       screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+       screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .main-banner-bg-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/01-hero/hero-tab@2.jpg');
+  }
+}
+
+                       /* desktop */
+
+   @media screen and (min-width: 1158px) {
+  .main-banner {
+    padding: 188px 0;
+  }
+
+   .main-banner-bg-image {
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/01-hero/hero-desk.jpg");
+ }
+
+.main-banner-title {
+  max-width: 496px;
+  text-align: center;
+  margin: 0 auto 48px;
+ 
+font-size: 56px;
+line-height: 1.07;
+ }
+}   
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi),
+       screen and (min-width: 1158px) and (min-device-pixel-ratio: 2),
+       screen and (min-width: 1158px) and (min-resolution: 2dppx) {
+  .main-banner-bg-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/01-hero/hero-desk@2.jpg');
+  }
+}
+ 
+              /* presentation */
+
+<@media screen and (max-width: 767px) {
+  
+
+  .presentation {
+    padding: 96px 0;
+  }
+  
+  .presentation-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 288px;
+    margin: 0 auto;
+    gap: 72px;
+  }
+
+  
+}
+
+.presentation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  border-radius: 4px;
+  background-color: var(--color-cloud);
+  margin-bottom: 8px;
+  border: 1px solid var(--color-light-slate);
+}
+
+
+.presentation-title-visible {
+  margin-bottom: 8px;
+}
+
+.presentation-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}          
+
+@media screen and (max-width: 1157px) {
+  .presentation-wrapper {
+    display: none;
+  }
+}
+
+
